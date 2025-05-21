@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3º EJC-São Francisco de Assis</title>
+  <link rel ="stylesheet" href="CSS/style.css">
+</head>
+<body>
+ <header class ="header">
+  <a href = "#home" class="logo">EJC -
+  <span>São Francisco de Assis</span></a>
+
+      <i class ="bx bx-menu" id="menu-icon"></i>
+
+    <nav class="navbar">
+      <a href="#home" class="active">Inicio</a>
+            <a href="#tema">Tema do encontro</a>
+            <a href="#termo">Termo LGPD</a>
+    </nav>
+ </header>
+
+ <section class="home" id="home">
+        <div class="home-img">
+            <img src="img/logo.png" alt="">
+        </div>
+
+         <div class="home-content">
+            <h3>Nossa Missão é <span id="text" class="text-animation"></span></h3>
+            <p>O Encontro de Jovens com Cristo (EJC) é um movimento da Igreja Católica voltado para evangelizar jovens, 
+              geralmente entre 15 e 29 anos, proporcionando-lhes uma experiência profunda de encontro 
+              pessoal com Cristo, consigo mesmos, com a comunidade e com a Igreja. Iniciado com um retiro 
+              de final de semana, o EJC é marcado por momentos de oração, palestras, dinâmicas, 
+              testemunhos e celebrações, sendo organizado por jovens que já vivenciaram o encontro, 
+              com o apoio de adultos e do pároco</p>
+              </div>
+     </section>
+
+      <section class="services" id="tema">
+        <h2 class="heading">Tema do Encontro</h2>
+
+        <div class="services-container">
+
+             <div class="service-box">
+                <div class="service-info">
+                    <h1>Sonhos que nasceram do céu 
+                      <br>Pois eu bem sei os planos que tenho Para vocês
+                      <br><br>Jeremias 29:11</h1>
+                      <br>
+                 </div>
+            </div>
+        </div><br><br><br>
+          <h2 class ="heading">Música Tema</h2>
+          <div style="display: flex; justify-content: center; align-items: center;">
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/f_qzhaIdis0?si=f0YdVcA7l8Y1-iBV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<br>      </div>
+     </section>
+
+<section class="services" id="termo">
+  <h2 class="heading">Termo LGPD</h2>
+  <div class="form-container">
+    <form action="https://formsubmit.co/laura.karolis.oliveira@gmail.com" method="POST">
+
+      <label for="nome">Nome completo:</label>
+      <input type="text" name="nome" required>
+
+      <label for="nacionalidade">Nacionalidade:</label>
+      <input type="text" name="nacionalidade" required>
+
+      <label for="civil">Estado civil:</label>
+      <select name="civil" required>
+        <option value="Solteiro">Solteiro(a)</option>
+        <option value="casado">Casado(a)</option>
+        <option value="viuvo">Viúvo(a)</option>
+        <option value="divorciado">Divorciado(a)</option>
+      </select>
+      
+      <label for="profissao">Profissão:</label>
+      <input type="text" name="profissao" required>
+
+      <label for="cpf">Inscrito(a) no CPF: (Sem pontos e traços)</label>
+      <input type="number" name="cpf" required>
+
+      <label for="rg">RG: (Sem pontos e traços)</label>
+      <input type="text" name="rg" required>
+
+      <label for="endereço">Endereço:</label>
+      <input type="text" name="endereço" required>
+
+      <label for="bairro">Bairro:</label>
+      <input type="text" name="bairro" required>
+
+      <label for="cidade">Cidade:</label>
+      <input type="text" name="cidade" required>
+
+      <label for="setor">Selecione a Equipe:</label>
+      <select name="setor" required>
+        <option value="Animação">Animação</option>
+        <option value="Café-Garçom">Café-Garçom</option>
+        <option value="Cozinha">Cozinha</option>
+        <option value="Dirigentes/Gerais">Dirigentes/Gerais</option>
+        <option value="Encerramento">Encerramento</option>
+        <option value="Externa">Externa</option>
+        <option value="Liturgia">Liturgia</option>
+        <option value="Mini-Mercado">Mini-Mercado</option>
+        <option value="Ordem">Ordem</option>
+        <option value="Sala">Sala</option>
+        <option value="Secretaria">Secretaria</option>
+        <option value="Segurança">Segurança</option>
+        <option value="Vigília">Vigília</option>
+      </select>
+
+      <label>Assinatura digital:</label>
+      <canvas id="assinatura" height="120"></canvas>
+      <input type="hidden" name="assinaturaImg" id="assinaturaImg">
+<br>
+
+<!--PROTEÇÃO CONTRA BOT-->
+  <input type="hidden" name="_captcha" value="false">
+
+
+      <div class="buttons">
+        <br>
+        <button type="button" class="Limpar" onclick="limparAssinatura()">Limpar</button>
+        <button type="submit" class="Enviar">Enviar</button>
+      </div>
+
+    <!-- Redirecionar após envio -->
+  <input type="hidden" name="_next" value="OBRIGADO.html">
+
+    <div class="msg" id="mensagem"></div>
+  </div>
+<br><br>
+  <footer class="footer">
+        <p class="copyright"> EJC | São Francisco de Assis - Gopoúva<br>Rua Francisco Polilo,24 - Gopoúva</p>
+     </footer>
+
+     <script src="script.js"></script>
+     <script src="scriptforms.js"></script>
+    </body>
+</html>
+
