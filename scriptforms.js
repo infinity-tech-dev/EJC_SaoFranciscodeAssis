@@ -9,10 +9,10 @@
 
   function desenhar(e) {
     if (!desenhando) return;
+    const rect = canvas.getBoundingClientRect();
     ctx.lineWidth = 2;
     ctx.lineCap = 'round';
     ctx.strokeStyle = '#000';
-    const rect = canvas.getBoundingClientRect();
     ctx.lineTo(e.clientX - rect.left, e.clientY - rect.top);
     ctx.stroke();
     ctx.beginPath();
@@ -24,25 +24,8 @@
     ctx.beginPath();
   }
 
-  document.getElementById('formulario').addEventListener('submit', function (e) {
-    e.preventDefault();
-
-    // Captura a imagem da assinatura
+  document.querySelector("form").addEventListener("submit", () => {
     const assinaturaBase64 = canvas.toDataURL();
     document.getElementById('assinaturaImg').value = assinaturaBase64;
-
-    // Envia os dados via fetch para seu Apps Script
-    const formData = new FormData(this);
-
-    })
-    .then(response => response.text())
-    .then(data => {
-      alert('Formulário enviado com sucesso!');
-      document.getElementById('formulario').reset();
-      limparAssinatura();
-    })
-    .catch(error => {
-      alert('Erro ao enviar. Tente novamente.');
-      console.error(error);
-    });
+  });
 
