@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // Texto digitando animado
     const words = ["Evangelizar", "Acolher", "Mostrar o amor de Cristo"];
     let currentIndex = 0;
     let currentText = "";
@@ -32,36 +33,38 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     type();
+
+    // Menu oculto
+    const navbar = document.querySelector('.navbar');
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('header nav a');
+    const menuIcon = document.getElementById("menu-icon");
+
+  menuIcon.addEventListener("click", () => {
+    navbar.classList.toggle("active");
+  });
+
+    window.onscroll = () => {
+        let scrollY = window.scrollY;
+
+        sections.forEach(sec => {
+            let offset = sec.offsetTop - 150;
+            let height = sec.offsetHeight;
+            let id = sec.getAttribute('id');
+
+            if (scrollY >= offset && scrollY < offset + height) {
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    const targetLink = document.querySelector(`header nav a[href*="${id}"]`);
+                    if (targetLink) {
+                        targetLink.classList.add('active');
+                    }
+                });
+            }
+        });
+
+        // Fecha o menu ao rolar a página (opcional)
+        menuIcon.classList.remove('bx-x');
+        navbar.classList.remove('active');
+    };
 });
-
-let menuIcon = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
-let sections = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header nav a');
-
-window.onscroll = () => {
-    sections.forEach(sec => {
-        let top = window.screenY;
-        let offset = sec.offsetTop - 150;
-        let height = sec.offsetHeight;
-        let id = sec.getAttribute('id');
-
-        if(top >= offset && top < offset + height){
-            navLinks.forEach(links => {
-                links.classList.remove('active');
-                document.querySelector('header nav a [href*=' + id + ']').classList.add('active');
-            })
-        }
-    })
-}
-
-menuIcon.onclick = () => {
-    menuIcon.classList.toggle('bx-x');
-    navbar.classList.toggle('active');
-}
-
-
-
-
-
-
