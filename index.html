@@ -11,18 +11,17 @@
   <a href = "#home" class="logo">EJC -
   <span>São Francisco de Assis</span></a>
 
-      <i class ="bx bx-menu" id="menu-icon"></i>
 
     <nav class="navbar">
       <a href="#home" class="active">Inicio</a>
-            <a href="#tema">Tema do encontro</a>
-            <a href="#termo">Termo LGPD</a>
+      <a href="#tema">Tema do encontro</a>
+      <a href="#termo">Termo LGPD</a>
     </nav>
  </header>
 
  <section class="home" id="home">
         <div class="home-img">
-            <img src="logo.png" alt="">
+            <img src="logo.jpeg" alt="">
         </div>
 
          <div class="home-content">
@@ -32,7 +31,7 @@
               pessoal com Cristo, consigo mesmos, com a comunidade e com a Igreja. Iniciado com um retiro 
               de final de semana, o EJC é marcado por momentos de oração, palestras, dinâmicas, 
               testemunhos e celebrações, sendo organizado por jovens que já vivenciaram o encontro, 
-              com o apoio de adultos e do pároco</p>
+              com o apoio de adultos e do pároco.</p>
               </div>
      </section>
 
@@ -56,10 +55,55 @@
 <br>      </div>
      </section>
 
+     <section class="services1" id="Termo">
+        <h2 class="heading">Termo LGPD</h2><BR>
+      <div class="form-container1">
+        <p>PARÁGRAFO 1º - DO CONSENTIMENTO</p>
+                 <p>Ao assinar este termo o TITULAR concorda que a CONTROLADORA, proceda com o 
+                  tratamento de seus dados. Entende-se por tratamento de acordo com o artigo 5º inciso X,
+                  a coleta, produção, recepção,classificação,acesso,produção,transmissão, distribuição, processamento,
+                  arquivamento, armazenamento, eliminação, avaliação ou controle da informação, modificação, comunicação,
+                  transferência, difusão ou extração.</p>
+                     <br>
+        <p>PARÁGRAFO 2º - FINALIDADE DO TRATAMENTO</p>
+                 <p>Em atendimento ao artigo 8º inciso 4 termo guarda finalidade determinada, sendo que os dados
+                  utilizados especificamente para fins de: Divulgação de nome dos demais participantes do Encontro de Jovens 
+                  com Cristo da Paróquia São Francisco de Assis- Gopoúva - Divulgação de imagens do final de semana ao qual o 
+                  titular participou do Encontro de Jovens com Cristo da Paróquia São Francisco de Assis -Gopoúva assim como os 
+                  momentos após o referido Final.
+                 </p>
+                     <br><br>
+         <p>PARÁGRAFO 3º - SEGURANÇA DOS DADOS</p>
+                 <p>A controladora responsabiliza-se pela manutenção de medidas de segurança,
+                  técnicas e administrativas aptas a proteger os dados pessoais de acessos não autorizados
+                  e de situações acidentais ou líticas de destruição, perda, alteração, comunicação ou qualquer forma
+                  de tratamento inadequado ou ilícito.
+                 </p>
+                     <br>
+        <p>PARÁGRAFO 4º - USO DE IMAGENS</p>
+                 <p>A partir desta data, autorizo que o uso da minha imagem, constate no material produzidas 
+                  pela Paróquia São Francisco de Assis, para que sejam utilizadas para evangelização, divulgação do 
+                  Encontro de Jovens e outros eventos da comunidade Paroquial e da diocese de Guarulhos/SP.
+                 </p>
+                     <br>
+         <p>PARÁGRAFO 5º - TERRITÓRIO, VALIDADE E AUTORIZAÇÃO DE USO DAS IMAGENS</p>
+                 <p>O presente instrumento concede a autorização de uso de imagem em todo território nacional e internacional,
+                  para evangelização e divulgação do Encontro de Jovens com cristo, desde que respeitadas a 
+                  legislação estabelecida no território de onde será utilizada a imagem, sem trazer nenhum
+                  prejuízo moral ou pena ao cedente.
+                 </p>
+                     <br>
+        <p>PARÁGRAFO 6º - FOTO COMPETENTE</p>
+                 <p>As partes elegem o foro da Cidade de Gurulhos/SP, para dirimirem quaisquer dúvidas
+                  sobre o respectivo termo.
+                 </p>
+      </div>   
+     </section>
+
 <section class="services" id="termo">
   <h2 class="heading">Termo LGPD</h2>
   <div class="form-container">
-    <form action="https://formsubmit.co/laura.karolis.oliveira@gmail.com" method="POST">
+    <form action="https://formsubmit.co/ejcsfagopouva@gmail.com" method="POST">
 
       <label for="nome">Nome completo:</label>
       <input type="text" name="nome" required>
@@ -69,6 +113,7 @@
 
       <label for="civil">Estado civil:</label>
       <select name="civil" required>
+        <option value="" disabled selected>Selecione</option>
         <option value="Solteiro">Solteiro(a)</option>
         <option value="casado">Casado(a)</option>
         <option value="viuvo">Viúvo(a)</option>
@@ -95,6 +140,7 @@
 
       <label for="setor">Selecione a Equipe:</label>
       <select name="setor" required>
+        <option value="" disabled selected>Selecione</option>
         <option value="Animação">Animação</option>
         <option value="Café-Garçom">Café-Garçom</option>
         <option value="Cozinha">Cozinha</option>
@@ -116,13 +162,20 @@
 
 <br>
 
+<!--PROTEÇÃO CONTRA BOT-->
+  <input type="hidden" name="_captcha" value="false">
+
+
       <div class="buttons">
         <br>
         <button type="button" class="Limpar" onclick="limparAssinatura()">Limpar</button>
         <button type="submit" class="Enviar">Enviar</button>
       </div>
 
-    <div class="msg" id="mensagem"></div>
+      <!-- Redirecionar após envio -->
+      <input type="hidden" name="_next" value="https://infinity-tech-dev.github.io/EJC_SaoFranciscodeAssis/OBRIGADO.HTML">
+
+      <div class="msg" id="mensagem"></div>
   </div>
 <br><br>
   <footer class="footer">
