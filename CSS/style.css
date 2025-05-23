@@ -208,6 +208,24 @@ span {
     animation: blink-caret 0.75s step-end infinite;
 }
 
+.text-animation1 {
+    font-size: 30px;
+    font-weight: 600;
+    display: inline-block;
+    position: relative;
+}
+
+.text-animation1::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 2px;
+    height: 100%;
+    background: var(--main-color);
+    animation: blink-caret 0.75s step-end infinite;
+}
+
 @keyframes blink-caret {
     from, to {
         border-color: transparent;
