@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Texto digitando animado
-    const words = ["Evangelizar", "Acolher", "Mostrar o amor de Cristo"];
+    const words = ["Evangelizar", "Acolher", "Mostrar o amor de Cristo" , "Sim"];
     let currentIndex = 0;
     let currentText = "";
     let isDeleting = false;
